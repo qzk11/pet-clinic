@@ -15,7 +15,7 @@
     </parent>
     <groupId>com.zhekun</groupId>
     <artifactId>pet-clinic</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>pet-clinic</name>
     <description>pet clinic project</description>
 
@@ -37,7 +37,20 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <goals>install</goals>
+                    <checkModificationExcludes>
+                        <checkModificationExclude>pom.xml</checkModificationExclude>
+                    </checkModificationExcludes>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
+    <scm>
+        <developerConnection>scm:git:git@github.com:qzk11/pet-clinic.git</developerConnection>
+    </scm>
 </project>
