@@ -1,0 +1,5 @@
+com/zhekun/petclinic/model/Pet.class
+com/zhekun/petclinic/model/Person.class
+com/zhekun/petclinic/model/Owner.class
+com/zhekun/petclinic/model/PetType.class
+com/zhekun/petclinic/model/Vet.class
