@@ -1,11 +1,11 @@
 package com.zhekun.petclinic.services.map;
 
 import com.zhekun.petclinic.model.Vet;
-import com.zhekun.petclinic.services.CrudService;
+import com.zhekun.petclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
     public Set<Vet> findAll() {
