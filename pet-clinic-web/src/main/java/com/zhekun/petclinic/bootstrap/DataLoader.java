@@ -1,11 +1,11 @@
 package com.zhekun.petclinic.bootstrap;
 
 import com.zhekun.petclinic.model.Owner;
+import com.zhekun.petclinic.model.PetType;
 import com.zhekun.petclinic.model.Vet;
 import com.zhekun.petclinic.services.OwnerService;
+import com.zhekun.petclinic.services.PetTypeService;
 import com.zhekun.petclinic.services.VetService;
-import com.zhekun.petclinic.services.map.OwnerServiceMap;
-import com.zhekun.petclinic.services.map.VetServiceMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -15,17 +15,28 @@ public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetTypeService petTypeService;
 
     @Autowired
-    public DataLoader(OwnerService ownerService, VetService vetService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
+        this.petTypeService = petTypeService;
     }
 
 
 
     @Override
     public void run(String... args) throws Exception {
+
+        PetType dog = new PetType();
+        dog.setName("Dog");
+        PetType savedDogType = petTypeService.save(dog);
+
+        PetType cat = new PetType();
+        cat.setName("Cat");
+        PetType savedCatType = petTypeService.save(cat);
+
         Owner owner1 = new Owner();
 
         owner1.setFirstName("Michael");
