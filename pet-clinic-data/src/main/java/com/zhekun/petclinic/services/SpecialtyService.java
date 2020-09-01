@@ -1,9 +1,7 @@
 package com.zhekun.petclinic.services;
 
-import com.zhekun.petclinic.model.Speciality;
+import com.zhekun.petclinic.model.Specialty;
 
-import java.util.Set;
-
-public interface SpecialtyService extends CrudService<Speciality, Long> {
+public interface SpecialtyService extends CrudService<Specialty, Long> {
 
 }
