@@ -6,6 +6,7 @@ import com.zhekun.petclinic.services.PetService;
 import com.zhekun.petclinic.services.PetTypeService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashSet;
 import java.util.Set;

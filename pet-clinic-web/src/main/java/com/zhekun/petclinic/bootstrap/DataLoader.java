@@ -5,6 +5,7 @@ import com.zhekun.petclinic.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 
@@ -37,6 +38,7 @@ public class DataLoader implements CommandLineRunner {
         }
 
     }
+
 
     private void loadData() {
         PetType dog = new PetType();
