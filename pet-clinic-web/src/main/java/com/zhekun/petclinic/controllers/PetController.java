@@ -14,6 +14,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import java.beans.PropertyEditorSupport;
+import java.time.LocalDate;
 import java.util.Collection;
 
 @Controller
@@ -41,9 +43,16 @@ public class PetController {
         return ownerService.findById(ownerId);
     }
 
-    @InitBinder("owner")
-    public void initOwnerBinder(WebDataBinder dataBinder) {
+    @InitBinder
+    public void dataBinder(WebDataBinder dataBinder) {
         dataBinder.setDisallowedFields("id");
+
+        dataBinder.registerCustomEditor(LocalDate.class, new PropertyEditorSupport() {
+            @Override
+            public void setAsText(String text) throws IllegalArgumentException{
+                setValue(LocalDate.parse(text));
+            }
+        });
     }
 
     @GetMapping("/pets/new")
@@ -63,10 +72,11 @@ public class PetController {
         owner.getPets().add(pet);
         if (result.hasErrors()) {
             model.put("pet", pet);
+            System.out.println("save failed");
             return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
         } else {
+            pet.setOwner(owner);
             petService.save(pet);
-
             return "redirect:/owners/" + owner.getId();
         }
     }
@@ -82,8 +92,10 @@ public class PetController {
         if (result.hasErrors()) {
             pet.setOwner(owner);
             model.addAttribute("pet", pet);
+
             return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
         } else {
+
             owner.getPets().add(pet);
             petService.save(pet);
             return "redirect:/owners/" + owner.getId();

@@ -1,5 +1,6 @@
 package com.zhekun.petclinic.services.springdatajpa;
 
+import com.zhekun.petclinic.model.Owner;
 import com.zhekun.petclinic.model.Pet;
 import com.zhekun.petclinic.repositories.PetRepository;
 import com.zhekun.petclinic.services.PetService;
@@ -43,4 +44,6 @@ public class PetSDJpaService implements PetService {
     public void deleteById(Long aLong) {
         petRepository.deleteById(aLong);
     }
+
+
 }
