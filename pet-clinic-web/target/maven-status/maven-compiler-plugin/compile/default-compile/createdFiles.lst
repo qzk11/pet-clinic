@@ -1,6 +1,10 @@
+com/zhekun/petclinic/formatters/PetTypeFormatter.class
 com/zhekun/petclinic/PetClinicApplication.class
 com/zhekun/petclinic/controllers/IndexController.class
+com/zhekun/petclinic/controllers/VisitController$1.class
 com/zhekun/petclinic/bootstrap/DataLoader.class
+com/zhekun/petclinic/controllers/PetController$1.class
 com/zhekun/petclinic/controllers/OwnerController.class
+com/zhekun/petclinic/controllers/VisitController.class
 com/zhekun/petclinic/controllers/VetController.class
 com/zhekun/petclinic/controllers/PetController.class

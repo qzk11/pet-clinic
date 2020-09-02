@@ -2,5 +2,7 @@
 /Users/qizhekun/Desktop/pet-clinic/pet-clinic-web/src/main/java/com/zhekun/petclinic/controllers/OwnerController.java
 /Users/qizhekun/Desktop/pet-clinic/pet-clinic-web/src/main/java/com/zhekun/petclinic/controllers/VetController.java
 /Users/qizhekun/Desktop/pet-clinic/pet-clinic-web/src/main/java/com/zhekun/petclinic/bootstrap/DataLoader.java
+/Users/qizhekun/Desktop/pet-clinic/pet-clinic-web/src/main/java/com/zhekun/petclinic/formatters/PetTypeFormatter.java
 /Users/qizhekun/Desktop/pet-clinic/pet-clinic-web/src/main/java/com/zhekun/petclinic/PetClinicApplication.java
 /Users/qizhekun/Desktop/pet-clinic/pet-clinic-web/src/main/java/com/zhekun/petclinic/controllers/IndexController.java
+/Users/qizhekun/Desktop/pet-clinic/pet-clinic-web/src/main/java/com/zhekun/petclinic/controllers/VisitController.java
